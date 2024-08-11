@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Version environment
+
+    Node 14.17.0
+
+    npm install --save-exact redux@4.1.2 react-redux@7.2.6
+
+    npm install -save-exact redux-devtools-extension@2.13.9 ( no support ) ->  redux-devtools-extension (new version)
+
 ## Available Scripts
 
 In the project directory, you can run:
