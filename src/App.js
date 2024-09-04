@@ -19,7 +19,8 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Learning react and redux !</h1> <div>Count: {props.count}</div>
+        <h1>Learning react and redux !</h1> <div>Count: {props.abc}</div>
+        <p>{props.countHoiDanIT}</p>
         <button onClick={() => handleIncrease()}>Increase Count</button>
         <button onClick={() => handleDecrease()}>Decrease Count</button>
       </header>
@@ -27,12 +28,17 @@ function App(props) {
   );
 }
 
+// map state (redux + store) + props react
 const mapStateToProps = (state) => {
   return {
-    count: state.counter.count,
+    countHoiDanIT: state.counter123.count,
+    abc: state.counter123.name,
   };
 };
 
+//event.target.value
+
+//map dispatch to props react
 const mapDispatchToProps = (dispatch) => {
   return {
     increaseCounter1: () => dispatch(increaseCounter()),
@@ -41,4 +47,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
+//higher order component
+//cấy 2 hàm mapStateToProps mapDispatchToProps vào APP
 export default connect(mapStateToProps, mapDispatchToProps)(App);
